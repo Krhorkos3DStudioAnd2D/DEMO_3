@@ -1,1 +1,214 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[NOMBRE_DE_LA_TIENDA] | Inicio</title>
+    
+    <link rel="icon" type="image/x-icon" href="ruta/al/favicon.ico">
+
+    <style>
+        :root {
+            --bg-dark: #0f1015;
+            --bg-card: #181a20;
+            --primary: #f3f4f6;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --whatsapp: #22c55e;
+            --whatsapp-hover: #16a34a;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2f333d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-catalogo {
+            background-color: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-catalogo:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--text-muted);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .card p strong {
+            color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- CAMBIO [NOMBRE_DE_LA_TIENDA] por el nombre real de la zapatería -->
+            <h1>[NOMBRE_DE_LA_TIENDA]</h1>
+            <p class="subtitle">Encuentra el calzado ideal para cada paso que das. Estilo, comodidad y durabilidad en un solo lugar.</p>
+        </header>
+
+        <div class="actions">
+            <!-- Botón principal para ir al catálogo -->
+            <a href="catalogo.html" class="btn btn-catalogo">Ver Catálogo</a>
+            
+            <!-- CAMBIO '521XXXXXXXXXX' por el número de WhatsApp del cliente -->
+            <a href="https://wa.me/521XXXXXXXXXX?" target="_blank" class="btn btn-whatsapp">Contactar por WhatsApp</a>
+        </div>
+
+        <div class="grid-info">
+            <!-- Tarjeta 1: Horarios -->
+            <div class="card">
+                <h2>Horarios de Atención</h2>
+                <p><strong>Lunes a Viernes:</strong> [09:00 AM - 08:00 PM]</p>
+                <p><strong>Sábados:</strong> [10:00 AM - 06:00 PM]</p>
+                <p><strong>Domingos:</strong> [10:00 AM - 03:00 PM]</p>
+            </div>
+
+            <!-- Tarjeta 2: Ubicación -->
+            <div class="card">
+                <h2>Ubicación</h2>
+                <p>Visítanos en nuestra sucursal física:</p>
+                <p><strong>Dirección:</strong> [Calle Falsa 123, Colonia Centro, Ciudad, País]</p>
+                <p><strong>Referencias:</strong> [Entre Avenida Principal y Calle Secundaria]</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 [NOMBRE_DE_LA_TIENDA]. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
